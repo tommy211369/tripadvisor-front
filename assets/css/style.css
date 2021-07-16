@@ -5,7 +5,7 @@ body {
 .wrapper {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 h1 {
@@ -14,13 +14,19 @@ h1 {
   margin-top: 50px 0 20px 0;
 }
 
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
 /* HEADER */
 
 header {
-  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 header > div {
@@ -72,6 +78,10 @@ header nav div:last-child {
 
 header nav div:last-child:hover {
   background-color: rgb(0, 0, 0, 0.8);
+}
+
+header nav div span {
+  margin-left: 10px;
 }
 
 .fa-pen,
@@ -228,22 +238,116 @@ main nav div p {
   display: none;
 }
 
-/* PHOTOS */
-main section {
-  margin: 0 auto;
-  max-width: 1140px;
+/* PICTURES */
+.pictures {
   display: flex;
-  background-color: red;
+  height: 430px;
 }
 
-main section div:first-child(1) {
+.pictures .col-1 {
   flex: 1;
+  height: 100%;
+  margin-right: 2px;
 }
-main section div:nth-child(2) {
+
+.pictures .col-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pictures .col-2 {
+  width: 480px;
+  height: 100%;
+}
+
+.pictures .col-2 img {
+  height: calc(50% - 1.5px);
+  width: 100%;
+  object-fit: cover;
+}
+
+/* INFOS */
+.infos {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+
+.infos .col-1 {
+  width: 580px;
+}
+
+.infos .col-1 p {
+  font-size: 20px;
+  font-family: "Georgia";
+  color: #333333;
+  line-height: 20.8px;
+}
+
+.infos .col-2 {
+  width: 470px;
+}
+
+.infos .col-2 > div {
   display: flex;
   flex-direction: column;
 }
 
+.infos img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 0 0 12px 12px;
+}
+
+.infos .col-2 h2 {
+  font-size: 32px;
+}
+.infos .col-2 .voyages {
+  padding: 20px 30px 30px 30px;
+  background-color: #fb5d5d;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.infos button {
+  margin-top: 20px;
+  width: 165px;
+  font-size: 16px;
+  padding: 19px 15px;
+  border-radius: 20px;
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+/* FOOTER */
+footer {
+  height: 150px;
+  display: flex;
+  background-color: #faf1ed;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  line-height: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* *********************** */
 /* MEDIA QUERIES */
 
 @media (max-width: 1184px) {
@@ -268,6 +372,15 @@ main section div:nth-child(2) {
   main nav div p {
     max-width: 100%;
   }
+
+  /* PICTURES */
+  main .pictures {
+    height: 370px;
+  }
+
+  .pictures .col-2 {
+    max-width: 400px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -278,9 +391,50 @@ main section div:nth-child(2) {
 
   /* MAIN */
   /* NAV */
+
   main nav div {
     min-width: 15%;
     align-items: center;
+  }
+
+  /* PICTURES */
+  main .pictures {
+    height: 275px;
+  }
+
+  .pictures .col-2 {
+    max-width: 325px;
+  }
+
+  /* INFOS */
+  .infos {
+    flex-direction: column;
+  }
+
+  .infos .col-1,
+  .infos .col-2 {
+    width: 100%;
+  }
+
+  .infos .col-2 {
+    margin-top: 40px;
+  }
+
+  .infos .col-2 > div {
+    flex-direction: row;
+    height: 275px;
+  }
+
+  .infos .col-2 .voyages {
+    width: 50%;
+    border-radius: 12px 0 0 12px;
+  }
+
+  .infos img {
+    width: 50%;
+    height: 275px;
+    object-fit: cover;
+    border-radius: 0 12px 12px 0px;
   }
 }
 
@@ -327,8 +481,8 @@ main section div:nth-child(2) {
   .blur {
     display: block;
     position: absolute;
-    top: 75px;
-    right: -5px;
+    top: 45px;
+    right: -30px;
     background: linear-gradient(270deg, #fff 50px, hsla(0, 0%, 100%, 0));
     width: 150px;
     height: 60px;
@@ -338,12 +492,57 @@ main section div:nth-child(2) {
   #chevron-right {
     display: block;
     position: absolute;
-    top: 88px;
-    right: 20px;
+    top: 70px;
+    right: 0px;
     font-size: 20px;
   }
 
   #chevron-right:hover {
     cursor: pointer;
+  }
+
+  /* PICTURES */
+  main .pictures {
+    margin-top: -25px;
+    height: 275px;
+  }
+
+  .pictures .col-1 {
+    margin: 0 -20px;
+  }
+
+  .pictures .col-2 {
+    display: none;
+  }
+
+  /* INFOS */
+  .infos {
+    flex-direction: column;
+  }
+
+  .infos .col-1,
+  .infos .col-2 {
+    width: 100%;
+  }
+
+  .infos .col-1 p {
+    font-size: 16px;
+  }
+  .infos .col-2 > div {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .infos .col-2 .voyages {
+    box-sizing: border-box;
+    border-radius: 12px 12px 0 0;
+    min-width: 100%;
+  }
+
+  .infos img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 0 0 12px 12px;
   }
 }
