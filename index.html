@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <title>TripAdvisor - Clone</title>
+  </head>
+  <body>
+      <!-- form -->
+      <div id="modal">
+      <div class="form-bloc">
+        <div class="form">
+          <i class="fas fa-times" id="btn-close"></i>
+
+          <h3>Formulaire de contact</h3>
+
+          <form id="form-contact" methode="post" action="#">
+            <input
+              type="text"
+              id="first-name"
+              placeholder="Prénom"
+              value="Tommy"
+              required
+            />
+            <input
+              type="text"
+              id="last-name"
+              placeholder="Nom"
+              required
+              value="Thongrasamy"
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              required
+              value="tommy.thongrasamy@gmail.com"
+            />
+            <textarea
+              required
+              id="message"
+              placeholder="Écrivez votre message..."
+            >
+Un message !!</textarea
+            >
+            <button type="submit" id="submit">Envoyer le formulaire</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- form -->
+    <header class="wrapper">
+      <i class="fas fa-bars" id="bars"></i>
+      <div>
+        <img
+          src="./assets/img/Tripadvisor_lockup_horizontal_secondary_registered.svg"
+          alt="logo-tripadvisor"
+        />
+        <div id="search-bar"><i class="fas fa-search"></i></div>
+      </div>
+
+      <nav>
+        <div><i class="fas fa-pen"></i><span>Avis</span></div>
+        <div><i class="far fa-heart"></i><span>Voyages</span></div>
+        <div><i class="far fa-bell"></i><span>Alertes</span></div>
+        <div id="btn-connect">Connectez-vous</div>
+      </nav>
+      <i id="search" class="fas fa-search"></i>
+    </header>
+
+    <main>
+      <div class="wrapper">
+        <h1><span style="color: #fb5d5d">Explorez </span>Paris</h1>
+      
+
+      <nav>
+        <div><p>Hôtels</p><i class="fas fa-bed"></i></div>
+        <div><p>Locations de vacances</p><i class="fas fa-home"></i></i></div>
+        <div><p>Activités</p><i class="fas fa-hourglass-half"></i></div>
+        <div><p>Restaurants</p><i class="fas fa-utensils"></i></div>
+        <div><p>Forums de voyage</p><i class="far fa-comments"></i></div>
+        <div><p>Vols</p><i class="fas fa-plane"></i></div>
+        <div><p>Hôtels</p><i class="fas fa-ship"></i></div>
+        <div><p>Plus</p><i class="fas fa-ellipsis-h"></i></div>
+      </nav>
+      </div>
+    </main>
+
+    <footer></footer>
+    <script src='./assets/script.js'></script>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+body {
+  font-family: "Trip Sans Reg";
+}
+
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 54px;
+  font-weight: bold;
+  margin-top: 50px 0 20px 0;
+}
+
+/* HEADER */
+
+header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+header img {
+  width: 188px;
+}
+
+header #search-bar {
+  width: 55%;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.fa-search {
+  font-size: 18px;
+}
+
+header nav {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header nav div {
+  margin-left: 10px;
+  padding: 13px;
+  transition: background-color 0.2s linear;
+  border-radius: 50px;
+}
+
+header nav div:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+header nav div:last-child {
+  background-color: black;
+  color: white;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+header nav div:last-child:hover {
+  background-color: rgb(0, 0, 0, 0.8);
+}
+
+.fa-pen,
+.fa-heart,
+.fa-bell {
+  font-size: 20px;
+}
+
+#search,
+#bars {
+  display: none;
+  font-size: 20px;
+}
+
+/* FORMULAIRE */
+#modal {
+  display: none;
+}
+.show {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.form-bloc {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 420px;
+  height: 460px;
+  padding: 60px 20px;
+  background-color: white;
+  opacity: 1;
+  border-radius: 20px;
+  position: relative;
+}
+
+.fa-times {
+  font-size: 25px;
+  color: grey;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.form h3 {
+  font-size: 23px;
+  text-align: center;
+}
+
+#form-contact {
+  margin-top: 40px;
+  display: flex;
+  height: 85%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#form-contact input,
+#form-contact textarea {
+  width: 60%;
+  padding: 0 10px;
+  font-size: 15px;
+  border: 2px solid black;
+}
+
+#form-contact input:focus,
+#form-contact textarea:focus {
+  outline: none;
+}
+
+#form-contact input {
+  line-height: 50px;
+}
+
+#form-contact textarea {
+  height: 150px;
+  resize: none;
+  padding: 10px;
+  font-family: inherit;
+}
+
+#submit {
+  width: 200px;
+  background-color: #04aa6c;
+  height: 40px;
+  text-align: center;
+  padding: 0;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 15px;
+  border: none;
+  transition: background-color 0.3s linear;
+}
+
+#submit:hover {
+  background-color: #35e1a1;
+  cursor: pointer;
+}
+
+#btn-close {
+  transition: all 0.2s linear;
+}
+
+#btn-close:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  color: goldenrod;
+}
+/* MAIN */
+/* NAV */
+
+main nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+main nav div {
+  border: 2px solid black;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+main nav div:nth-child(6),
+main nav div:nth-child(7) {
+  display: none;
+}
+
+main nav div p {
+  max-width: 95px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1184px) {
+  /* MAIN */
+  /* NAV */
+}
+
+@media (max-width: 1024px) {
+  /*HEADER */
+  header nav span {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #search-bar,
+  header nav {
+    display: none;
+  }
+
+  header > div {
+    max-width: max-content;
+  }
+
+  #search,
+  #bars {
+    display: block;
+  }
+}
