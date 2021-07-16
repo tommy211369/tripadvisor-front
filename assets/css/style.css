@@ -197,7 +197,7 @@ header nav div:last-child:hover {
 main nav {
   display: flex;
   justify-content: space-between;
-  margin: 20px;
+  margin: 20px 0;
 }
 
 main nav div {
@@ -210,6 +210,10 @@ main nav div {
   border-radius: 10px;
 }
 
+main nav div:nth-child(1) {
+  margin-left: 0;
+}
+
 main nav div:nth-child(6),
 main nav div:nth-child(7) {
   display: none;
@@ -219,11 +223,51 @@ main nav div p {
   max-width: 95px;
 }
 
+.blur,
+#chevron-right {
+  display: none;
+}
+
+/* PHOTOS */
+main section {
+  margin: 0 auto;
+  max-width: 1140px;
+  display: flex;
+  background-color: red;
+}
+
+main section div:first-child(1) {
+  flex: 1;
+}
+main section div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 1184px) {
   /* MAIN */
   /* NAV */
+
+  main nav div:nth-child(6),
+  main nav div:nth-child(7) {
+    display: block;
+    display: flex;
+  }
+
+  main nav {
+    flex-wrap: wrap;
+  }
+
+  main nav div {
+    min-width: 20%;
+    align-items: center;
+  }
+
+  main nav div p {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -231,9 +275,17 @@ main nav div p {
   header nav span {
     display: none;
   }
+
+  /* MAIN */
+  /* NAV */
+  main nav div {
+    min-width: 15%;
+    align-items: center;
+  }
 }
 
 @media (max-width: 768px) {
+  /*HEADER */
   #search-bar,
   header nav {
     display: none;
@@ -246,5 +298,52 @@ main nav div p {
   #search,
   #bars {
     display: block;
+  }
+
+  /* MAIN */
+  /* NAV */
+  main {
+    position: relative;
+  }
+
+  main h1 {
+    font-size: 32px;
+  }
+  main nav {
+    flex-wrap: nowrap;
+    overflow: scroll;
+  }
+
+  main nav::-webkit-scrollbar {
+    overflow-y: hidden;
+  }
+
+  main nav div {
+    min-width: 120px;
+
+    height: 7px;
+  }
+
+  .blur {
+    display: block;
+    position: absolute;
+    top: 75px;
+    right: -5px;
+    background: linear-gradient(270deg, #fff 50px, hsla(0, 0%, 100%, 0));
+    width: 150px;
+    height: 60px;
+    border-radius: 50px;
+  }
+
+  #chevron-right {
+    display: block;
+    position: absolute;
+    top: 88px;
+    right: 20px;
+    font-size: 20px;
+  }
+
+  #chevron-right:hover {
+    cursor: pointer;
   }
 }
