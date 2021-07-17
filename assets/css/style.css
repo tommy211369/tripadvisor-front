@@ -631,6 +631,10 @@ footer a:hover {
     width: 290px;
   }
 
+  .immanquables:hover {
+    transform: none;
+  }
+
   .immanquables .col-2 {
     box-sizing: border-box;
     max-width: 635px;
