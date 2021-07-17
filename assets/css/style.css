@@ -109,6 +109,12 @@ header nav div span {
 #modal {
   display: none;
 }
+
+#message-form {
+  color: goldenrod;
+  text-align: center;
+  margin-top: 20px;
+}
 .show {
   position: absolute;
   top: 0;
@@ -361,6 +367,9 @@ main nav div p {
   display: flex;
   justify-content: space-between;
   margin-bottom: 100px;
+}
+
+.immanquables:hover {
 }
 
 .immanquables .col-1 {

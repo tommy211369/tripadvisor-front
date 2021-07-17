@@ -4,6 +4,7 @@ $.addEventListener("DOMContentLoaded", () => {
   const form = $.querySelector("#form-contact");
   const btnConnect = $.querySelector("#btn-connect");
   const btnClose = $.querySelector("#btn-close");
+  const formMessage = $.querySelector("#message-form");
 
   btnConnect.addEventListener("click", () => {
     $.body.style.overflowY = "hidden";
@@ -13,6 +14,7 @@ $.addEventListener("DOMContentLoaded", () => {
 
   btnClose.addEventListener("click", () => {
     $.body.style.overflowY = "initial";
+    formMessage.innerHTML = "";
     $.querySelector("#modal").style.display = "none";
     $.querySelector("#modal").classList.remove("show");
   });
@@ -25,6 +27,8 @@ $.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    formMessage.innerHTML = "Le formulaire a bien été envoyé !";
+
     const data = {
       firstName: $.querySelector("#first-name").value,
       lastName: $.querySelector("#last-name").value,
@@ -33,7 +37,7 @@ $.addEventListener("DOMContentLoaded", () => {
     };
 
     console.log(data);
-
+    cleanForm();
     try {
       const response = await axios.post("http://localhost:3000", data);
       console.log(response);
