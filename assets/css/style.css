@@ -642,6 +642,11 @@ footer a:hover {
   .immanquables img {
     width: 250px;
   }
+
+  #bristol img,
+  #frenchie img {
+    height: 188px;
+  }
 }
 
 @media (max-width: 768px) {
