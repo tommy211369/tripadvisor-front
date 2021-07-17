@@ -391,9 +391,9 @@ main nav div p {
   overflow: scroll;
 }
 
-/* .immanquables .col-2::-webkit-scrollbar {
+.immanquables .col-2::-webkit-scrollbar {
   overflow: hidden;
-} */
+}
 
 .immanquables .col-2 img,
 .immanquables .col-2 h4,
