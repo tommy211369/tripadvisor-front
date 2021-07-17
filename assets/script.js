@@ -24,10 +24,16 @@ $.addEventListener("DOMContentLoaded", () => {
     form.reset();
   };
 
+  const removeMessage = () => {
+    formMessage.style.display = "none";
+  };
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    formMessage.innerHTML = "Le formulaire a bien été envoyé !";
+    formMessage.style.display = "block";
+
+    setTimeout(removeMessage, 3000);
 
     const data = {
       firstName: $.querySelector("#first-name").value,

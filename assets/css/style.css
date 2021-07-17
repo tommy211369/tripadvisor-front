@@ -111,6 +111,7 @@ header nav div span {
 }
 
 #message-form {
+  display: none;
   color: goldenrod;
   text-align: center;
   margin-top: 20px;
