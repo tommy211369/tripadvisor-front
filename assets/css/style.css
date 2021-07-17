@@ -366,10 +366,12 @@ main nav div p {
 .immanquables {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 100px;
+  margin: 50px 0 100px 0;
+  transition: transform 0.3s linear;
 }
 
 .immanquables:hover {
+  transform: scale(1.05);
 }
 
 .immanquables .col-1 {
@@ -424,6 +426,11 @@ main nav div p {
 .immanquables .col-2 div {
   position: relative;
   margin-left: 10px;
+}
+
+#bristol img,
+#frenchie img {
+  height: 205px;
 }
 
 .immanquables .col-2 div:hover {
