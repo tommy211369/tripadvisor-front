@@ -20,6 +20,15 @@ h2 {
   margin: 20px 0;
 }
 
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
 /* HEADER */
 
 header {
@@ -218,6 +227,13 @@ main nav div {
   flex: 1;
   margin: 5px;
   border-radius: 10px;
+  transition: background-color 0.2s linear;
+}
+
+main nav div:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
 }
 
 main nav div:nth-child(1) {
@@ -267,11 +283,20 @@ main nav div p {
   object-fit: cover;
 }
 
+.pictures img {
+  transition: opacity 0.2s linear;
+}
+
+.pictures img:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 /* INFOS */
 .infos {
   display: flex;
   justify-content: space-between;
-  margin: 40px 0;
+  margin: 40px 0 100px 0;
 }
 
 .infos .col-1 {
@@ -321,6 +346,122 @@ main nav div p {
   color: white;
   background-color: black;
   border: none;
+  transition: all 0.2s linear;
+}
+
+.infos button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  color: black;
+  transform: scale(1.1);
+}
+
+/* IMMANQUABLES */
+.immanquables {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.immanquables .col-1 {
+  width: 220px;
+  margin-right: 80px;
+}
+
+.immanquables .col-1 p {
+  margin: 10px 0;
+}
+
+.immanquables .col-1 p:nth-child(2) {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #333333;
+  line-height: 21px;
+  font-size: 18px;
+}
+
+.immanquables .col-1 p:nth-child(3),
+.immanquables .col-2 p {
+  font-size: 14px;
+}
+
+.immanquables .col-2 {
+  width: 840px;
+  display: flex;
+  justify-content: space-between;
+  overflow: scroll;
+}
+
+/* .immanquables .col-2::-webkit-scrollbar {
+  overflow: hidden;
+} */
+
+.immanquables .col-2 img,
+.immanquables .col-2 h4,
+.immanquables .col-2 p,
+.immanquables .fa-circle {
+  margin-bottom: 5px;
+  transition: opacity 0.2s linear;
+}
+
+.immanquables .col-2 p,
+.immanquables span {
+  color: #333333;
+}
+
+.immanquables .col-2 div:first-child {
+  margin-left: 0;
+}
+
+.immanquables .col-2 div {
+  position: relative;
+  margin-left: 10px;
+}
+
+.immanquables .col-2 div:hover {
+  cursor: pointer;
+}
+
+.immanquables .col-2 div:hover img,
+.immanquables .col-2 div:hover h4 {
+  opacity: 0.8;
+}
+
+.immanquables .col-2 div:hover h4 {
+  text-decoration: underline;
+}
+
+.immanquables .col-2 div:hover .fa-heart {
+  opacity: 1;
+}
+
+.immanquables .fa-heart {
+  position: absolute;
+  z-index: 1000;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: white;
+  transition: background-color 0.2s linear;
+}
+
+.immanquables .fa-heart:hover {
+  background-color: #dbdbdb;
+}
+
+.immanquables .col-2 div,
+.immanquables img {
+  width: 270px;
+}
+
+.immanquables span {
+  font-size: 12px;
+}
+
+.immanquables .fa-circle {
+  margin-left: 2px;
+  font-size: 12px;
+  color: #10aa6c;
 }
 
 /* FOOTER */
@@ -330,17 +471,19 @@ footer {
   background-color: #faf1ed;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 }
 
 footer p {
   line-height: 20px;
+  font-size: 12px;
 }
 
 footer a {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 footer a:hover {
@@ -380,6 +523,35 @@ footer a:hover {
 
   .pictures .col-2 {
     max-width: 400px;
+  }
+
+  /* IMMANQUABLES */
+  .immanquables {
+    margin-right: -20px;
+  }
+
+  /* .immanquables .col-2 {
+    min-width: 870px;
+  }
+
+  .immanquables .col-2 div {
+    margin-right: 15px;
+  }*/
+
+  .immanquables .col-2 {
+    box-sizing: border-box;
+    max-width: 870px;
+    height: 300px;
+    overflow: scroll;
+  }
+
+  /* .immanquables .col-2 div,
+  .immanquables img {
+    width: 250px;
+  } */
+
+  .immanquables .col-2 div:last-child {
+    margin-right: 0;
   }
 }
 
@@ -435,6 +607,24 @@ footer a:hover {
     height: 275px;
     object-fit: cover;
     border-radius: 0 12px 12px 0px;
+  }
+
+  /* IMMANQUABLES */
+
+  .immanquables .col-1 {
+    width: 290px;
+  }
+
+  .immanquables .col-2 {
+    box-sizing: border-box;
+    max-width: 635px;
+    height: 300px;
+    overflow: scroll;
+  }
+
+  .immanquables .col-2 div,
+  .immanquables img {
+    width: 250px;
   }
 }
 
@@ -518,6 +708,7 @@ footer a:hover {
   /* INFOS */
   .infos {
     flex-direction: column;
+    margin-bottom: 220px;
   }
 
   .infos .col-1,
@@ -544,5 +735,26 @@ footer a:hover {
     height: 190px;
     object-fit: cover;
     border-radius: 0 0 12px 12px;
+  }
+
+  /* IMMANQUABLES */
+  .immanquables {
+    flex-direction: column;
+  }
+
+  .immanquables .col-1 {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .immanquables .col-1 p {
+    margin: 15px 0;
+  }
+
+  .immanquables .col-2 {
+    box-sizing: border-box;
+    min-width: 100%;
+    height: 300px;
+    overflow: scroll;
   }
 }
