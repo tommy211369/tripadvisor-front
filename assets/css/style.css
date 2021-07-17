@@ -779,3 +779,14 @@ footer a:hover {
     overflow: scroll;
   }
 }
+
+@media (max-width: 600px) {
+  .immanquables {
+    max-width: 572px;
+    overflow: hidden;
+  }
+
+  .immanquables .col-1 {
+    max-width: 90%;
+  }
+}
