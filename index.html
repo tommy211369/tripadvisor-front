@@ -13,6 +13,8 @@
       integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <title>TripAdvisor - Clone</title>
   </head>
   <body>
@@ -29,7 +31,6 @@
               type="text"
               id="first-name"
               placeholder="Prénom"
-             
               required
             />
             <input
@@ -37,14 +38,12 @@
               id="last-name"
               placeholder="Nom"
               required
-       
             />
             <input
               type="email"
               id="email"
               placeholder="Email"
               required
-        
             />
             <textarea
               required
@@ -60,7 +59,7 @@
     </div>
     <!-- form -->
     <div class="wrapper">
-    <header>
+      <header>
       <i class="fas fa-bars" id="bars"></i>
       <div>
         <img
@@ -74,13 +73,13 @@
         <div><i class="fas fa-pen"></i><span>Avis</span></div>
         <div><i class="far fa-heart"></i><span>Voyages</span></div>
         <div><i class="far fa-bell"></i><span>Alertes</span></div>
-        <div id="btn-connect">Connectez-vous</div>
+        <div id="btn-connect">Contact</div>
       </nav>
       <i id="search" class="fas fa-search"></i>
-    </header>
+      </header>
 
 
-    <main>
+      <main>
      <div class="blur"></div>
       <i id="chevron-right" class="fas fa-chevron-right" ></i>
 
@@ -320,12 +319,13 @@
     </div>
     <!-- wrapper -->
 
-    </main>
+      </main>
+    </div>
 
-    <footer>
+      <footer>
         <p>Made at <a href="https://www.lereacteur.io/" target="blank">Le Reacteur</a> by <a href="https://github.com/tommy211369" target="blank">Tommy Thongrasamy</a> - 2021</p>
 
-    </footer>
+      </footer>
     <script src='./assets/script.js'></script>
   </body>
 </html>
