@@ -520,6 +520,9 @@ footer a:hover {
     display: flex;
   }
 
+  main nav div:nth-child(5) {
+    margin-left: 0;
+  }
   main nav {
     flex-wrap: wrap;
   }
@@ -580,6 +583,14 @@ footer a:hover {
 
   /* MAIN */
   /* NAV */
+
+  main nav div:nth-child(5) {
+    margin: 5px;
+  }
+
+  main nav div:nth-child(6) {
+    margin-left: 0;
+  }
 
   main nav div {
     min-width: 15%;
@@ -651,6 +662,19 @@ footer a:hover {
   #bristol img,
   #frenchie img {
     height: 188px;
+  }
+}
+
+@media (max-width: 940px) {
+  /* MAIN */
+  /* NAV */
+
+  main nav div:nth-child(5) {
+    margin-left: 0px;
+  }
+
+  main nav div:nth-child(6) {
+    margin-left: 5px;
   }
 }
 
