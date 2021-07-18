@@ -448,12 +448,18 @@ main nav div p {
   margin: 30px 0;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 18px;
+  color: #333333;
 }
 
 .immanquables > div .col-1 a {
   text-decoration: none;
   color: initial;
   font-size: 14px;
+}
+
+.immanquables > div .col-1 a:hover {
+  text-decoration: underline;
+  color: #545454;
 }
 
 .immanquables > div .col-2 {
@@ -506,6 +512,7 @@ main nav div p {
 .immanquables .col-2 p,
 .immanquables span {
   color: #333333;
+  font-size: 14px;
 }
 
 .immanquables .col-2 .col-carrousel:hover {
