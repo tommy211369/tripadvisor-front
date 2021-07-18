@@ -60,6 +60,7 @@ header #search-bar {
 
 .fa-search {
   font-size: 18px;
+  margin-left: 5px;
 }
 
 header input {
