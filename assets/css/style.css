@@ -397,7 +397,7 @@ main nav div p {
 /* IMMANQUABLES */
 .immanquables {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin: 50px 0 100px 0;
   transition: transform 0.3s linear;
 }
@@ -406,41 +406,63 @@ main nav div p {
   transform: scale(1.05);
 }
 
-.immanquables .col-1 {
-  width: 220px;
-  margin-right: 80px;
-}
-
-.immanquables .col-1 p {
-  margin: 10px 0;
-}
-
-.immanquables .col-1 p:nth-child(2) {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #333333;
-  line-height: 21px;
-  font-size: 18px;
-}
-
-.immanquables .col-1 p:nth-child(3),
-.immanquables .col-2 p {
-  font-size: 14px;
-}
-
-.immanquables .col-2 {
-  width: 840px;
+.immanquables > div {
   display: flex;
-  justify-content: space-between;
+}
+
+.immanquables > div .col-1 {
+  width: 25%;
+  height: 100%;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.immanquables > div .col-1 p {
+  margin: 30px 0;
+}
+
+.immanquables > div .col-2 {
+  width: 75%;
+  height: 100%;
+  display: flex;
   overflow: scroll;
 }
 
-.immanquables .col-2::-webkit-scrollbar {
-  overflow: hidden;
+/* Hide scrollbar for Chrome, Safari and Opera */
+.immanquables > div .col-2::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.immanquables > div .col-2 {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.immanquables .col-carrousel {
+  height: 100%;
+  /* width: calc(100% / 3 - (40px / 3)); */
+  width: calc((100% - 40px) / 3);
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.immanquables .col-carrousel:not(:last-child) {
+  margin-right: 20px;
+}
+
+.immanquables .col-carrousel img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.relative {
+  position: relative;
 }
 
 .immanquables .col-2 img,
 .immanquables .col-2 h4,
-.immanquables .col-2 p,
 .immanquables .fa-circle {
   margin-bottom: 5px;
   transition: opacity 0.2s linear;
@@ -451,34 +473,20 @@ main nav div p {
   color: #333333;
 }
 
-.immanquables .col-2 div:first-child {
-  margin-left: 0;
-}
-
-.immanquables .col-2 div {
-  position: relative;
-  margin-left: 10px;
-}
-
-#bristol img,
-#frenchie img {
-  height: 205px;
-}
-
-.immanquables .col-2 div:hover {
+.immanquables .col-2 .col-carrousel:hover {
   cursor: pointer;
 }
 
-.immanquables .col-2 div:hover img,
-.immanquables .col-2 div:hover h4 {
+.immanquables .col-2 .col-carrousel:hover img,
+.immanquables .col-2 .col-carrousel:hover h4 {
   opacity: 0.8;
 }
 
-.immanquables .col-2 div:hover h4 {
+.immanquables .col-2 .col-carrousel:hover h4 {
   text-decoration: underline;
 }
 
-.immanquables .col-2 div:hover .fa-heart {
+.immanquables .col-2 .col-carrousel:hover .fa-heart {
   opacity: 1;
 }
 
@@ -495,11 +503,6 @@ main nav div p {
 
 .immanquables .fa-heart:hover {
   background-color: #dbdbdb;
-}
-
-.immanquables .col-2 div,
-.immanquables img {
-  width: 270px;
 }
 
 .immanquables span {
