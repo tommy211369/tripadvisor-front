@@ -319,6 +319,12 @@ main nav div p {
 
 .infos .col-2 {
   width: 470px;
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
+}
+
+.infos .col-2:hover {
+  box-shadow: 0 0 20px 0px black;
 }
 
 .infos .col-2 > div {
