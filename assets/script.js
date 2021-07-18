@@ -30,15 +30,15 @@ $.addEventListener("DOMContentLoaded", () => {
   btnClose.addEventListener("click", () => {
     $.querySelector("#modal").classList.remove("show");
     $.querySelector("#modal").style.display = "none";
-    messageSuccess.innerHTML = "";
-    messageError.innerHTML = "";
+    messageSuccess.innerHTML = style.display = "none";
+    messageError.innerHTML = style.display = "none";
     $.body.style.overflowY = "initial";
   });
 
   // Fonction pour vider les champs du formulaire :
-  // const cleanForm = () => {
-  //   form.reset();
-  // };
+  const cleanForm = () => {
+    form.reset();
+  };
 
   const removeMessage = () => {
     messageSuccess.style.display = "none";
@@ -60,7 +60,7 @@ $.addEventListener("DOMContentLoaded", () => {
     };
 
     console.log(data);
-    // cleanForm();
+    cleanForm();
     try {
       const response = await axios.post("http://localhost:3000", data);
       console.log(response);
@@ -68,7 +68,7 @@ $.addEventListener("DOMContentLoaded", () => {
         // alert("Votre formulaire a bien été envoyé");
         messageSuccess.style.display = "block";
         setTimeout(removeMessage, 3000);
-        // cleanForm();
+        cleanForm();
       }
     } catch (e) {
       if (e.response.data.error === "Missing parameters") {
@@ -77,7 +77,7 @@ $.addEventListener("DOMContentLoaded", () => {
         // alert("Une erreur est survenue");
         messageError.style.display = "block";
         setTimeout(removeMessage, 3000);
-        // cleanForm();
+        cleanForm();
       }
     }
   });
