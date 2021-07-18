@@ -7,20 +7,11 @@ $.addEventListener("DOMContentLoaded", () => {
   const messageSuccess = $.querySelector("#message-success");
   const messageError = $.querySelector("#message-error");
   const modal = $.querySelector("#modal");
-  const formBloc = $.querySelector("#form-bloc");
 
   btnConnect.addEventListener("click", () => {
     $.body.style.overflowY = "hidden";
     modal.style.display = "block";
     modal.classList.add("show");
-    messageSuccess.style.display = "none";
-    messageError.style.display = "none";
-  });
-
-  formBloc.addEventListener("click", () => {
-    $.body.style.overflowY = "initial";
-    modal.classList.remove("show");
-    modal.style.display = "none";
     messageSuccess.style.display = "none";
     messageError.style.display = "none";
   });

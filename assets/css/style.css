@@ -408,6 +408,33 @@ main nav div p {
 
 .immanquables > div {
   display: flex;
+  position: relative;
+}
+
+#arrow-left,
+#arrow-right {
+  position: absolute;
+  font-size: 40px;
+  top: 80px;
+  z-index: 1000;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+}
+
+#arrow-left:hover,
+#arrow-right:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+#arrow-left {
+  left: 265px;
+}
+
+#arrow-right {
+  right: -20px;
 }
 
 .immanquables > div .col-1 {
