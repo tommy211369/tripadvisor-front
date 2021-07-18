@@ -52,11 +52,25 @@ header #search-bar {
   width: 55%;
   border: 2px solid #e0e0e0;
   border-radius: 8px;
-  padding: 10px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
 }
 
 .fa-search {
   font-size: 18px;
+}
+
+header input {
+  width: 100%;
+  margin-left: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+header input:focus {
+  outline: none;
 }
 
 header nav {
@@ -686,7 +700,7 @@ footer a:hover {
 
 @media (max-width: 768px) {
   /*HEADER */
-  #search-bar,
+  header #search-bar,
   header nav {
     display: none;
   }
