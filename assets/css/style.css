@@ -137,6 +137,7 @@ header nav div span {
   color: red;
   text-align: center;
   margin-top: 20px;
+  /* overflow: */
 }
 
 .show {

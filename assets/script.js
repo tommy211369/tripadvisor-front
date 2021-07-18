@@ -28,11 +28,11 @@ $.addEventListener("DOMContentLoaded", () => {
   });
 
   btnClose.addEventListener("click", () => {
+    $.body.style.overflowY = "initial";
     $.querySelector("#modal").classList.remove("show");
     $.querySelector("#modal").style.display = "none";
     messageSuccess.innerHTML = style.display = "none";
     messageError.innerHTML = style.display = "none";
-    $.body.style.overflowY = "initial";
   });
 
   // Fonction pour vider les champs du formulaire :
@@ -45,12 +45,21 @@ $.addEventListener("DOMContentLoaded", () => {
     messageError.style.display = "none";
   };
 
+  // const closeForm = () => {
+  //   $.body.style.overflowY = "visible";
+  //   $.querySelector("#modal").classList.remove("show");
+  //   $.querySelector("#modal").style.display = "none";
+  //   messageSuccess.innerHTML = style.display = "none";
+  //   messageError.innerHTML = style.display = "none";
+  // };
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     messageSuccess.style.display = "block";
-
     setTimeout(removeMessage, 3000);
+    // setTimeout(closeForm, 4000);
+    cleanForm();
 
     const data = {
       firstName: $.querySelector("#first-name").value,
@@ -60,7 +69,7 @@ $.addEventListener("DOMContentLoaded", () => {
     };
 
     console.log(data);
-    cleanForm();
+
     try {
       const response = await axios.post("http://localhost:3000", data);
       console.log(response);
