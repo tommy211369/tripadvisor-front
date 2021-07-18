@@ -419,6 +419,14 @@ main nav div p {
 
 .immanquables > div .col-1 p {
   margin: 30px 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.immanquables > div .col-1 a {
+  text-decoration: none;
+  color: initial;
+  font-size: 14px;
 }
 
 .immanquables > div .col-2 {
@@ -545,6 +553,12 @@ footer a:hover {
 /* *********************** */
 /* MEDIA QUERIES */
 
+@media (max-width: 1240px) {
+  .immanquables:hover {
+    transform: none;
+  }
+}
+
 @media (max-width: 1184px) {
   /* MAIN */
   /* NAV */
@@ -578,35 +592,6 @@ footer a:hover {
 
   .pictures .col-2 {
     max-width: 400px;
-  }
-
-  /* IMMANQUABLES */
-  .immanquables {
-    margin-right: -20px;
-  }
-
-  /* .immanquables .col-2 {
-    min-width: 870px;
-  }
-
-  .immanquables .col-2 div {
-    margin-right: 15px;
-  }*/
-
-  .immanquables .col-2 {
-    box-sizing: border-box;
-    max-width: 870px;
-    height: 300px;
-    overflow: scroll;
-  }
-
-  /* .immanquables .col-2 div,
-  .immanquables img {
-    width: 250px;
-  } */
-
-  .immanquables .col-2 div:last-child {
-    margin-right: 0;
   }
 }
 
@@ -674,29 +659,24 @@ footer a:hover {
 
   /* IMMANQUABLES */
 
-  .immanquables .col-1 {
-    width: 290px;
+  .immanquables {
+    /* max-width: 100%; */
+    margin-right: -20px;
   }
 
-  .immanquables:hover {
-    transform: none;
+  .immanquables > div {
+    overflow: hidden;
   }
 
   .immanquables .col-2 {
     box-sizing: border-box;
-    max-width: 635px;
-    height: 300px;
+    max-width: 100%;
+    /* height: 300px; */
     overflow: scroll;
   }
 
-  .immanquables .col-2 div,
-  .immanquables img {
-    width: 250px;
-  }
-
-  #bristol img,
-  #frenchie img {
-    height: 188px;
+  .immanquables .col-carrousel {
+    min-width: 235px;
   }
 }
 
@@ -806,7 +786,7 @@ footer a:hover {
   }
   .infos .col-2 > div {
     flex-direction: column;
-    width: 100%;
+    /* width: 100%; */
   }
 
   .infos .col-2 .voyages {
@@ -823,46 +803,52 @@ footer a:hover {
   }
 
   /* IMMANQUABLES */
+
   .immanquables {
-    flex-direction: column;
     margin-bottom: 50px;
+    height: 500px;
   }
 
-  .immanquables .col-1 {
-    margin-bottom: 20px;
-    width: 100%;
+  .immanquables > div {
+    flex-direction: column;
+    /* margin-bottom: 50px; */
   }
 
-  .immanquables .col-1 p {
-    margin: 15px 0;
+  .immanquables > div .col-1 {
+    /* margin-bottom: 10px; */
+    min-width: 100%;
+    margin: 0;
+    height: auto;
   }
 
   .immanquables .col-2 {
     box-sizing: border-box;
     min-width: 100%;
-    height: 300px;
+    margin: 0;
+    height: auto;
+
     overflow: scroll;
   }
 }
 
 @media (max-width: 630px) {
-  .immanquables .col-2 {
-    box-sizing: border-box;
-    min-width: 100%;
-    height: 480px;
+  .immanquables {
+    margin-bottom: 50px;
+    height: 600px;
   }
 
   .immanquables .col-2 div,
+  .immanquables .col-carrousel,
   .immanquables img {
     width: 485px;
   }
 
-  #bristol img,
-  #frenchie img {
-    height: 364px;
+  .immanquables img {
+    min-height: 335px;
+    object-fit: cover;
   }
 }
-
+/* 
 @media (max-width: 600px) {
   .immanquables {
     max-width: 572px;
@@ -872,4 +858,4 @@ footer a:hover {
   .immanquables .col-1 {
     max-width: 90%;
   }
-}
+} */
