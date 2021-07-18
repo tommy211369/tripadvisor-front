@@ -4,7 +4,8 @@ $.addEventListener("DOMContentLoaded", () => {
   const form = $.querySelector("#form-contact");
   const btnConnect = $.querySelector("#btn-connect");
   const btnClose = $.querySelector("#btn-close");
-  const formMessage = $.querySelector("#message-form");
+  const messageSuccess = $.querySelector("#message-success");
+  const messageError = $.querySelector("#message-error");
 
   btnConnect.addEventListener("click", () => {
     $.body.style.overflowY = "hidden";
@@ -25,13 +26,14 @@ $.addEventListener("DOMContentLoaded", () => {
   };
 
   const removeMessage = () => {
-    formMessage.style.display = "none";
+    messageSuccess.style.display = "none";
+    messageError.style.display = "none";
   };
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    formMessage.style.display = "block";
+    messageSuccess.style.display = "block";
 
     setTimeout(removeMessage, 3000);
 
@@ -48,14 +50,18 @@ $.addEventListener("DOMContentLoaded", () => {
       const response = await axios.post("http://localhost:3000", data);
       console.log(response);
       if (response.status === 200) {
-        alert("Votre formulaire a bien été envoyé");
+        // alert("Votre formulaire a bien été envoyé");
+        messageSuccess.style.display = "block";
+        setTimeout(removeMessage, 3000);
         cleanForm();
       }
     } catch (e) {
       if (e.response.data.error === "Missing parameters") {
         alert("Veuillez remplir tous les champs du formulaire");
       } else {
-        alert("Une erreur est survenue");
+        // alert("Une erreur est survenue");
+        messageError.style.display = "block";
+        setTimeout(removeMessage, 3000);
         cleanForm();
       }
     }

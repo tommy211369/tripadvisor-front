@@ -125,12 +125,20 @@ header nav div span {
   display: none;
 }
 
-#message-form {
+#message-success {
   display: none;
   color: goldenrod;
   text-align: center;
   margin-top: 20px;
 }
+
+#message-error {
+  display: none;
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
 .show {
   position: absolute;
   top: 0;
