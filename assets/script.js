@@ -1,5 +1,4 @@
 const $ = document;
-const modal = $.querySelector("#modal");
 
 // if (modal.style.display === "block") {
 //   $.body.style.overflowY = "hidden";
@@ -20,19 +19,22 @@ $.addEventListener("DOMContentLoaded", () => {
   const btnClose = $.querySelector("#btn-close");
   const messageSuccess = $.querySelector("#message-success");
   const messageError = $.querySelector("#message-error");
+  const modal = $.querySelector("#modal");
 
   btnConnect.addEventListener("click", () => {
     $.body.style.overflowY = "hidden";
-    $.querySelector("#modal").style.display = "block";
-    $.querySelector("#modal").classList.add("show");
+    modal.style.display = "block";
+    modal.classList.add("show");
+    messageSuccess.style.display = "none";
+    messageError.style.display = "none";
   });
 
   btnClose.addEventListener("click", () => {
     $.body.style.overflowY = "initial";
-    $.querySelector("#modal").classList.remove("show");
-    $.querySelector("#modal").style.display = "none";
-    messageSuccess.innerHTML = style.display = "none";
-    messageError.innerHTML = style.display = "none";
+    modal.classList.remove("show");
+    modal.style.display = "none";
+    messageSuccess.style.display = "none";
+    messageError.style.display = "none";
   });
 
   // Fonction pour vider les champs du formulaire :
@@ -45,20 +47,11 @@ $.addEventListener("DOMContentLoaded", () => {
     messageError.style.display = "none";
   };
 
-  // const closeForm = () => {
-  //   $.body.style.overflowY = "visible";
-  //   $.querySelector("#modal").classList.remove("show");
-  //   $.querySelector("#modal").style.display = "none";
-  //   messageSuccess.innerHTML = style.display = "none";
-  //   messageError.innerHTML = style.display = "none";
-  // };
-
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     messageSuccess.style.display = "block";
     setTimeout(removeMessage, 3000);
-    // setTimeout(closeForm, 4000);
     cleanForm();
 
     const data = {
