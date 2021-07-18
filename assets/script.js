@@ -1,18 +1,5 @@
 const $ = document;
 
-// if (modal.style.display === "block") {
-//   $.body.style.overflowY = "hidden";
-// }
-
-// const btnClose = $.querySelector("#btn-close");
-
-// btnClose.addEventListener("click", () => {
-//   $.body.style.overflowY = "initial";
-//   formMessage.innerHTML = "";
-//   modal.style.display = "none";
-//   modal.classList.remove("show");
-// });
-
 $.addEventListener("DOMContentLoaded", () => {
   const form = $.querySelector("#form-contact");
   const btnConnect = $.querySelector("#btn-connect");
@@ -20,11 +7,20 @@ $.addEventListener("DOMContentLoaded", () => {
   const messageSuccess = $.querySelector("#message-success");
   const messageError = $.querySelector("#message-error");
   const modal = $.querySelector("#modal");
+  const formBloc = $.querySelector("#form-bloc");
 
   btnConnect.addEventListener("click", () => {
     $.body.style.overflowY = "hidden";
     modal.style.display = "block";
     modal.classList.add("show");
+    messageSuccess.style.display = "none";
+    messageError.style.display = "none";
+  });
+
+  formBloc.addEventListener("click", () => {
+    $.body.style.overflowY = "initial";
+    modal.classList.remove("show");
+    modal.style.display = "none";
     messageSuccess.style.display = "none";
     messageError.style.display = "none";
   });
@@ -47,6 +43,7 @@ $.addEventListener("DOMContentLoaded", () => {
     messageError.style.display = "none";
   };
 
+  // form listener
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
