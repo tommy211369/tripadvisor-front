@@ -8,6 +8,14 @@ $.addEventListener("DOMContentLoaded", () => {
   const messageError = $.querySelector("#message-error");
   const modal = $.querySelector("#modal");
 
+  // window.addEventListener("scroll", () => {
+  //   console.log(window.scrollY);
+
+  //   if (window.scrollY >= 315) {
+  //     console.log("yes !");
+  //   }
+  // });
+
   btnConnect.addEventListener("click", () => {
     $.body.style.overflowY = "hidden";
     modal.style.display = "block";

@@ -886,14 +886,21 @@ footer a:hover {
     object-fit: cover;
   }
 }
-/* 
-@media (max-width: 600px) {
+
+@media (max-width: 425px) {
   .immanquables {
-    max-width: 572px;
-    overflow: hidden;
+    margin-bottom: 100px;
+    height: 500px;
   }
 
-  .immanquables .col-1 {
-    max-width: 90%;
+  .immanquables .col-2 div,
+  .immanquables .col-carrousel,
+  .immanquables img {
+    width: 270px;
   }
-} */
+
+  .immanquables img {
+    min-height: 200px;
+    object-fit: cover;
+  }
+}
